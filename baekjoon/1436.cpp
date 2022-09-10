@@ -12,7 +12,7 @@ int main(){
     int number;
     
     
-    for(int i=666;i<3000000;i++){ //6666
+    for(int i=666;;i++){ //6666
         string str = to_string(i); //'6666'
         int length = str.length(); // 4
         for(int j=0;j<length;j++){ // 4
