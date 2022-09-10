@@ -1,7 +1,6 @@
-// https://www.acmicpc.net/problem/4153
-
 #include <iostream>
 #include <cmath>
+#include <algorithm>
 using namespace std;
 
 int main(){
@@ -13,16 +12,12 @@ int main(){
         if(arr[0] == 0 && arr[1] == 0 && arr[2] == 0){
             return 0;
         }
+
+        sort(arr, arr+3); // 오름차순으로 배열 정렬
         
         if (pow(arr[0], 2) + pow(arr[1], 2) == pow(arr[2], 2)){
             cout << "right\n";
-        }
-        else if (pow(arr[1], 2) + pow(arr[2], 2) == pow(arr[0], 2)){
-            cout << "right\n";
-        }
-        else if (pow(arr[2], 2) + pow(arr[0], 2) == pow(arr[1], 2)){
-            cout << "right\n";
-        }
+            }
         else{
             cout << "wrong\n";
         }
