@@ -2,21 +2,16 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
-using namespace std;
+
+bool compare(char a, char b){
+    return a > b;
+}
 
 int main(){
+    int N;
+    cin >> N;
     string seq;
-    cin >> seq;
-
-    int size = seq.size();
-    int arr[size] = {0};
-    for(int i=0;i<size;i++){
-        arr[i] = seq[i] -'0';
-    }
-
-    sort(arr, arr+size); 
-
-    for(int i=size-1;i>=0;i--){
-        cout << arr[i];
-    }
+    seq = to_string(N);
+    sort(begin(seq), end(seq), compare);
+    cout << seq;
 }
