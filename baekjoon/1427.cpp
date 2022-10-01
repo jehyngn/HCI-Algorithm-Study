@@ -15,3 +15,4 @@ int main(){
     sort(begin(seq), end(seq), compare);
     cout << seq;
 }
+ 
